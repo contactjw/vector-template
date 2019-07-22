@@ -22,6 +22,7 @@ int main()
     for (count = 0; count < SIZE; count++)
         cout << intTable[count] << " ";
     cout << endl;
+    cout << endl;
     cout << "These values are in doubleTable:\n";
     for (count = 0; count < SIZE; count++)
         cout << doubleTable[count] << " ";
@@ -43,6 +44,25 @@ int main()
         cout << "12.84 was not found in doubleTable.\n";
     else
         cout << "12.84 was found at subscript " << result << endl;
+    cout << endl;
+    
+    // Adding value to end of intTable
+    cout << "Adding the value 14 to intTable.\n";
+    intTable.push_back(14);
+    cout << "These values are now in intTable:\n";
+    for (count = 0; count < intTable.size(); count++)
+        cout << intTable[count] << " ";
+    cout << endl;
+    cout << endl;
+    
+    // Remove the last two values of intTable
+    cout << "Removing the last two elements from intTable.\n";
+    intTable.pop_back();
+    intTable.pop_back();
+    cout << "These values are now in intTable:\n";
+    for (count = 0; count < intTable.size(); count++)
+        cout << intTable[count] << " ";
+    cout << endl;
     
     return 0;
 }

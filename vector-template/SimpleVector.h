@@ -133,7 +133,7 @@ void SimpleVector<T>::push_back(T val)
         
         aptr = temp;
         
-        temp = null;
+        temp = NULL;
         
         arraySize++;
     }
@@ -143,6 +143,30 @@ void SimpleVector<T>::push_back(T val)
     }
 }
 
-
+template <class T>
+void SimpleVector<T>::pop_back()
+{
+    try
+    {
+        T *temp = new T[arraySize - 1];
+        
+        for (int counter = 0; counter < arraySize - 1; counter++)
+        {
+            temp[counter] = aptr[counter];
+        }
+        
+        delete [] aptr;
+        
+        aptr = temp;
+        
+        temp = NULL;
+        
+        arraySize--;
+    }
+    catch(bad_alloc)
+    {
+        memError();
+    }
+}
 
 #endif /* SimpleVector_h */

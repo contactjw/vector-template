@@ -26,6 +26,7 @@
 		27D728A922E5373200E20E09 /* vector-template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "vector-template"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D728AC22E5373200E20E09 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		27D728B322E5374200E20E09 /* SimpleVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVector.h; sourceTree = "<group>"; };
+		27D728B422E53B3F00E20E09 /* SearchableVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchableVector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 			children = (
 				27D728AC22E5373200E20E09 /* main.cpp */,
 				27D728B322E5374200E20E09 /* SimpleVector.h */,
+				27D728B422E53B3F00E20E09 /* SearchableVector.h */,
 			);
 			path = "vector-template";
 			sourceTree = "<group>";

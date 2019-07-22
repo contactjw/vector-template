@@ -38,10 +38,13 @@ public:
     }
     
     // Accessor to return a specific element
-    T getElementAt(int sub);
+    T getElementAt(int position);
     
     // Overloaded [] operator declaration
     T &operator[](const int &);
+    
+    void push_back(T);
+    void pop_back();
 };
 
 
@@ -112,5 +115,34 @@ T &SimpleVector<T>::operator[](const int &sub)
         subError();
     return aptr[sub];
 }
+
+template <class T>
+void SimpleVector<T>::push_back(T val)
+{
+    try
+    {
+        T *temp = new T[arraySize + 1];
+        
+        for (int counter = 0; counter < arraySize; counter++)
+        {
+            temp[counter] = aptr[counter];
+        }
+        temp[arraySize] = val;
+        
+        delete [] aptr;
+        
+        aptr = temp;
+        
+        temp = null;
+        
+        arraySize++;
+    }
+    catch(bad_alloc)
+    {
+        memError();
+    }
+}
+
+
 
 #endif /* SimpleVector_h */
